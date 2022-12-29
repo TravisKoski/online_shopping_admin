@@ -22,4 +22,22 @@ Public Class loginBackendController
         command = New SQLiteCommand("", connection)
 
     End Sub
+    'checks if a user is already in the database, returns
+    'accordingly
+    Public Function check_user_existence(ByVal userName As String) As Boolean
+        Dim user_exists As Boolean = Nothing
+        Dim query As String = String.Format("select * from admins where name = 
+'{0}'", userName)
+        Try
+            connection.Open()
+            command.CommandText = query
+            Dim rdr As SQLiteDataReader = command.ExecuteReader()
+            user_exists = rdr.Read() 'read will always return false if the query returned nothing
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+
+        End Try
+        Return user_exists
+    End Function
 End Class
