@@ -1,11 +1,11 @@
 ﻿Imports System.Collections.ObjectModel
 Imports System.Data.SQLite
 Public Class Form1
-
+    Dim loginControls As loginBackendController
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'give access to the backend, and then hide each component regarding
         'creating a new user unless the user specifies to
-        Dim loginControls As loginBackendController = New loginBackendController("online_shopping.db")
+        loginControls = New loginBackendController("online_shopping.db")
         hide_new_user_fields()
 
     End Sub
@@ -14,6 +14,9 @@ Public Class Form1
         Label3.Show()
         Label4.Show()
         Label5.Show()
+        new_username_entry.Show()
+        new_user_password_entry.Show()
+        new_user_password_reEntry.Show()
         new_user_button.Show()
     End Sub
 
@@ -21,6 +24,9 @@ Public Class Form1
         Label3.Hide()
         Label4.Hide()
         Label5.Hide()
+        new_username_entry.Hide()
+        new_user_password_entry.Hide()
+        new_user_password_reEntry.Hide()
         new_user_button.Hide()
     End Sub
 
@@ -39,7 +45,7 @@ Public Class Form1
             MsgBox("mismatch in password entries")
         Else
             'enter the details of the user in db
-            loginBackendController.add_new_admin_user(new_username, new_user_password)
+            loginControls.add_new_admin_user(new_username, new_user_password)
         End If
 
     End Sub
