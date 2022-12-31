@@ -66,4 +66,9 @@ Public Class Form1
             MsgBox("login failed")
         End If
     End Sub
+
+    Private Sub add_item_button_Click(sender As Object, e As EventArgs) Handles add_item_button.Click
+        'opens the add item form
+        new_item_form.Show()
+    End Sub
 End Class
