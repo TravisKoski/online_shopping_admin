@@ -88,7 +88,7 @@ Partial Class new_item_form
         'item_name_entry
         '
         Me.item_name_entry.Location = New System.Drawing.Point(91, 20)
-        Me.item_name_entry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.item_name_entry.Margin = New System.Windows.Forms.Padding(2)
         Me.item_name_entry.Name = "item_name_entry"
         Me.item_name_entry.Size = New System.Drawing.Size(149, 31)
         Me.item_name_entry.TabIndex = 5
@@ -96,7 +96,7 @@ Partial Class new_item_form
         'category_entry
         '
         Me.category_entry.Location = New System.Drawing.Point(114, 66)
-        Me.category_entry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.category_entry.Margin = New System.Windows.Forms.Padding(2)
         Me.category_entry.Name = "category_entry"
         Me.category_entry.Size = New System.Drawing.Size(149, 31)
         Me.category_entry.TabIndex = 6
@@ -104,7 +104,7 @@ Partial Class new_item_form
         'price_entry
         '
         Me.price_entry.Location = New System.Drawing.Point(85, 116)
-        Me.price_entry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.price_entry.Margin = New System.Windows.Forms.Padding(2)
         Me.price_entry.Name = "price_entry"
         Me.price_entry.Size = New System.Drawing.Size(149, 31)
         Me.price_entry.TabIndex = 7
@@ -112,7 +112,7 @@ Partial Class new_item_form
         'on_hand_entry
         '
         Me.on_hand_entry.Location = New System.Drawing.Point(154, 158)
-        Me.on_hand_entry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.on_hand_entry.Margin = New System.Windows.Forms.Padding(2)
         Me.on_hand_entry.Name = "on_hand_entry"
         Me.on_hand_entry.Size = New System.Drawing.Size(149, 31)
         Me.on_hand_entry.TabIndex = 8
@@ -120,7 +120,7 @@ Partial Class new_item_form
         'case_quantity_entry
         '
         Me.case_quantity_entry.Location = New System.Drawing.Point(147, 199)
-        Me.case_quantity_entry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.case_quantity_entry.Margin = New System.Windows.Forms.Padding(2)
         Me.case_quantity_entry.Name = "case_quantity_entry"
         Me.case_quantity_entry.Size = New System.Drawing.Size(149, 31)
         Me.case_quantity_entry.TabIndex = 9
@@ -129,7 +129,7 @@ Partial Class new_item_form
         '
         Me.add_item_button.AutoSize = True
         Me.add_item_button.Location = New System.Drawing.Point(164, 237)
-        Me.add_item_button.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.add_item_button.Margin = New System.Windows.Forms.Padding(2)
         Me.add_item_button.Name = "add_item_button"
         Me.add_item_button.Size = New System.Drawing.Size(165, 35)
         Me.add_item_button.TabIndex = 10
@@ -152,7 +152,7 @@ Partial Class new_item_form
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "new_item_form"
         Me.Text = "new_item_form"
         Me.ResumeLayout(False)
