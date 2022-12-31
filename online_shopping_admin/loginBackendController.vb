@@ -65,4 +65,27 @@ commit;", userName, password)
             connection.Close()
         End Try
     End Sub
+
+    Public Function find_password_by_name(ByVal username As String)
+        'takes in a username supplied by the login form, then retrieves the password
+        'and returns it
+        Dim password As String = Nothing
+        Dim query As String = String.Format("select password from admins
+where name = '{0}' limit 1;", username)
+        Try
+            connection.Open()
+            command.CommandText = query
+            Dim rdr As SQLiteDataReader = command.ExecuteReader()
+            rdr.Read()
+            password = rdr("password")
+            rdr.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        Finally
+            connection.Close()
+
+        End Try
+        Return password
+    End Function
 End Class
