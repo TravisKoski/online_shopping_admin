@@ -63,6 +63,8 @@ commit;", name, category, price, on_hand, casepack)
             connection.Open()
             command.CommandText = insert_command
             command.ExecuteNonQuery()
+            'alert when item added successfully
+            MsgBox("item added successfully")
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
         Finally
