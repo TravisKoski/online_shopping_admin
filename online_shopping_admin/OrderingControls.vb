@@ -24,8 +24,23 @@ Public Class OrderingControls
         command = New SQLiteCommand("", connection)
     End Sub
 
-    Public Sub place_order(ByVal item_id As Integer)
+    Public Sub place_order(ByVal item_id As Integer, ByVal num_cases As Integer)
         'TODO: make an update call to the db using the id as the reference
+        command.CommandText = String.Format("begin transaction;
+update items
+set on_hand = on_hand + {0}*case_quantity where id = {1};
+commit;", num_cases, item_id)
+        'attempt to run this query
+        Try
+            connection.Open()
+            command.ExecuteNonQuery()
+            MsgBox("successfully ordered")
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        Finally
+            connection.Close()
+        End Try
+
     End Sub
     Public Function view_warehouse_items() As DataTable
         'retrieves the items stored in the warehouse,
