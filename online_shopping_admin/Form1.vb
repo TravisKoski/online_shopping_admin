@@ -71,4 +71,8 @@ Public Class Form1
         'opens the add item form
         new_item_form.Show()
     End Sub
+
+    Private Sub order_item_button_Click(sender As Object, e As EventArgs) Handles order_item_button.Click
+        item_order_form.Show()
+    End Sub
 End Class
